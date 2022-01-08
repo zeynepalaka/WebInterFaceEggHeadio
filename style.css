@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Poppins:wght@100;300;500;600&family=Roboto:wght@500&family=Scope+One&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,37 +8,404 @@
 	font: inherit;
 	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
+	font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	background: #f4f7f9;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
+
 img {
-    border: 0;
+	border: 0;
 }
+
 :focus {
-    outline: 0;
+	outline: 0;
 }
+
 .clear {
-    clear: both;
+	clear: both;
+}
+
+.header {
+	background: #141618;
+	position: sticky;
+	/*header hep yukarda kalmasını sağlamak için css kodu bu şekildedir ayrı olarak js kodu da mevcuttur.*/
+	top: 0;
+}
+
+.container {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.egg-btn {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	color: #fff;
+	background-color: #212A39;
+	letter-spacing: 1px;
+	border-radius: 4px;
+	text-transform: uppercase;
+	/*küçük olan yazılar büyümesini sağlar*/
+}
+
+.header .container {
+	display: flex;
+	align-items: center;
+	height: 60px;
+}
+
+.header .logo img {
+	width: 120px;
+	height: 40px;
+	margin-right: 40px;
+}
+
+.header .menu-nav ul li a {
+	font-size: 14px;
+	color: rgba(255, 255, 255, .6);
+	line-height: 60px;
+	/*60pxiçerisinde nereye tıklarsan o link aktüf olacaktır*/
+	display: block;
+
+}
+
+.header .menu-nav ul li a:hover {
+	color: #fff;
+}
+
+.header .search {
+	display: flex;
+	overflow: hidden;
+	border-radius: 4px;
+	margin-left: auto;
+	/*flex kullandığım için otomatik olarak kendisi bölüyor ve sağa doğru gidiyor*/
+
+}
+
+.header .search input {
+	display: flex;
+	/*boşlulşar gitsin ve yan yana olmasını istediğim için*/
+	height: 34px;
+	width: 250px;
+	border-radius: 4px;
+	background: #21252d;
+	color: #fff;
+	padding: 0 10px;
+}
+
+.header .search input::placeholder {
+	color: rgba(255, 255, 255, .6);
+}
+
+.header .search button {
+	width: 32px;
+	height: 34px;
+	color: #fff;
+	background: #21252d;
+	cursor: pointer;
+}
+
+.header .search button:hover {
+	background: #316aff;
+}
+
+.header .login-buttons ul {
+	display: flex;
+}
+
+.header .login-buttons ul li {
+	margin-left: 15px;
+}
+
+.header .login-buttons ul li a {
+	height: 34px;
+	display: block;
+	line-height: 34px;
+	color: rgba(255, 255, 255, .8);
+}
+
+.header .login-buttons ul li a:hover {
+	color: #fff;
+}
+
+.header .login-buttons ul li.join-now-button a {
+	background: #36855b;
+	padding: 0 15px;
+	border-radius: 4px;
+}
+
+/*BANNER SECTİON*/
+.banner {
+	background: linear-gradient(170deg, #212A39, rgba(7, 68, 7, 0.933));
+}
+
+.banner .container {
+	min-height: 50vh;
+	/*sayfanın yüksekliği nasıl olursa yarsını kağlasın demek*/
+	display: flex;
+	align-items: center;
+	padding: 50px 0;
+}
+
+.banner .container .banner-box {
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.banner .container .banner-box img {
+	max-width: 100%;
+
+}
+
+.banner .container .banner-box.banner-image {
+	padding-left: 150px;
+}
+
+.banner .container .banner-box h1 {
+	color: #fff;
+	font-size: 48px;
+	line-height: 56px;
+	/*satır yüksekliği*/
+
+}
+
+.banner .container .banner-box h2 {
+	font-size: 24px;
+	color: rgba(255, 255, 255, .6);
+	margin-bottom: 40px;
+}
+
+/*Section1*/
+.section1 {
+	display: flex;
+	align-items: center;
+	padding: 120px 0;
+}
+
+.section1 .lang {
+	display: flex;
+	width: 392px;
+	min-width: 392px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.section1 .lang a {
+	width: 184px;
+	height: 184px;
+	background: #fff;
+	border-radius: 4px;
+	margin-bottom: 24px;
+	display: flex;
+	/*tam tamına ortalamak için bu kodları kullanıyoruz*/
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+}
+
+.section1 .lang a:hover {
+	transform: scale(1.03);
+	/*oluşturduğumuz kutuları bu oranda büyütmemiz sağlar.*/
+
+}
+
+.section1 .lang a img {
+	margin-bottom: 10px;
+	height: 40px;
+}
+
+.section1 .lang a .title {
+	font-size: 18px;
+	color: #111;
+}
+
+.section1 .inner {
+	padding-left: 160px;
+}
+
+.section1 .inner h3 {
+	font-size: 36px;
+	color: #111;
+	margin-bottom: 30px;
+}
+
+.section1 .inner p {
+	font-size: 18px;
+	margin-bottom: 20px;
+	line-height: 28px;
+}
+
+.section-comment {
+	background-color: #fff;
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, .1);
+	padding: 64px 96px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.section-comment .icon {
+	width: 56px;
+	height: 56px;
+	border-radius: 100%;
+	background: #f4f7f9;
+	line-height: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	margin-bottom: 32px;
+}
+
+.section-comment p {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 36px;
+	max-width: 60%;
+}
+
+.section-comment .user {
+	display: flex;
+	align-items: center;
+
+}
+
+.section-comment .user img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 8px;
+}
+
+/*section learn*/
+.section-learn{
+	display: flex;
+
+
+}
+.section-learn>div{
+	width: 50%;
+	min-width: 50%;
+}
+.section-learn .text h3{
+	font-size: 36px;
+	margin-bottom: 30px;
+}
+.section-learn .text p{
+	line-height: 20px;
+	font-size: 16px;
+	color: #111;	
+}
+.section-learn .text  .egg-btn{
+	margin-top: 50px;
+}
+.section-learn .image img{
+	width: 100%;
+	display: block;
+}
+/*footer*/
+.footer{
+	background: #141618;
+
+}
+.footer .container{
+	display: flex;
+	flex-direction: column;
+	padding: 40px 0;
+
+}
+.footer .logo{
+	margin-bottom: 20px;
+}
+.footer .footer-nav{
+	display: flex;
+}
+.footer .footer-nav nav {
+	margin-right: 32px;
+	margin-left: 50px;
+}
+.footer .footer-nav nav h6{
+	color: #f4f7f9;
+	letter-spacing: 1.2px;
+	margin-bottom: 10px ;
+
+}
+.footer .footer-nav nav ul li a{
+display: block;
+font-size: 16px;
+color: #fff;
+line-height: 150%;
+}
+.footer .footer-nav .search{
+	margin-left: auto;
+
+}
+.footer .footer-nav .search h6{
+	color: #fff;
+	margin-bottom: 16px;
+	font-size: 20px;
+}
+.footer .footer-nav .search input{
+	width: 300px;
+	height: 48px;
+	background: #21252d;
+}
+.footer .footer-nav .search button{
+	width: 48px;
+	height: 48px;
+	background: #316aff;
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
 }
